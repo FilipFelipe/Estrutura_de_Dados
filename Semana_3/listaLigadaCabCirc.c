@@ -77,35 +77,37 @@ PONT retornarPrimeiro(LISTA *l, TIPOCHAVE *ch)
     *ch = l->cabeca->prox->reg.chave;
   return l->cabeca->prox;
 }
-void josepheus(LISTA *l)
+void josepheus(LISTA *soldados)
 {
   TIPOCHAVE chave;
   PONT excluir = NULL;
-  PONT elemento = l->cabeca->prox;
-  while (tamanho(l) > 1)
+  PONT elemento = soldados->cabeca->prox;
+  while (tamanho(soldados) > 1)
   {
     excluir = elemento->prox;
-    if (excluir == l->cabeca)
-    {
-      excluir = l->cabeca->prox;
-      l->cabeca->prox = excluir->prox;
+    //Verifica se é cabeça da lista
+    if (excluir == soldados->cabeca){
+      excluir = soldados->cabeca->prox;
+      soldados->cabeca->prox = excluir->prox;
     }
-    else
-    {
+    else{
       elemento->prox = excluir->prox;
     }
+    //Eliminar o elemento
     free(excluir);
-    if (elemento->prox == l->cabeca)
-    {
-      elemento = l->cabeca->prox;
+    //verifica se o prox é o cabeça
+    if (elemento->prox == soldados->cabeca){
+      elemento = soldados->cabeca->prox;
     }
-    else
-    {
+    else{
       elemento = elemento->prox;
     }
+    //Exibir a lista a cada loop
+    exibirLista(soldados);
   }
-  retornarPrimeiro(l, &chave);
+  //Mostrar o sobrevivente
+  retornarPrimeiro(soldados, &chave);
   printf("\n--------------------------------------------------------------\n", chave);
-  printf("Voce deve sentar na cadeira %i para sobreviver\n", chave);
+  printf("Você deve sentar na cadeira %i para sobreviver\n", chave);
   printf("--------------------------------------------------------------", chave);
 }
