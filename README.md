@@ -17,7 +17,8 @@ Introdução  às  Estruturas  de  Dados:  Vetores  e  matrizes;  Recursividade;
 
 * - [x] [Semana 1](https://github.com/FilipFelipe/Estrutura_de_Dados/tree/main/Semana_1)
 * - [x] [Semana 2](https://github.com/FilipFelipe/Estrutura_de_Dados/tree/main/Semana_2)
-* - [ ] Semana 3 
+* - [x] [Semana 3](https://github.com/FilipFelipe/Estrutura_de_Dados/tree/main/Semana_3)
 * - [ ] Semana 4 
-* - [ ] Semana 5
+* - [ ] Semana 5 
+* - [ ] Semana 6
 
